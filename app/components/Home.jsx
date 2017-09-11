@@ -4,7 +4,7 @@ const ZodiacForm = require('./ZodiacForm')
 class Home extends React.Component {
   render () {
     return (
-      <div className="Home">
+      <div className="Home container">
         <p> Hello World </p>
         <div className="ZodiacForm">
           <ZodiacForm />

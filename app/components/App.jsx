@@ -4,7 +4,7 @@ const Main = require('./Main')
 const Header = require('./Header')
 
 const App = () => (
-  <div className="Application">
+  <div className="Application container">
     <Header />
     <Main />
   </div>
