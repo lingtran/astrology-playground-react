@@ -30,7 +30,7 @@ class ZodiacForm extends React.Component {
           <FormGroup>
             <DayPickerInput
               name="birthday"
-              placeholder = "DD/MM/YYYY"
+              placeholder = "Enter DOB: DD/MM/YYYY"
               format="DD/MM/YYYY"
               value={value}
               onDayChange={this.handleDayChange}
