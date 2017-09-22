@@ -29195,7 +29195,7 @@ exports = module.exports = __webpack_require__(43)(undefined);
 
 
 // module
-exports.push([module.i, ".Home {\n  color: #faa; }\n\n.Application {\n  border-color: black; }\n", ""]);
+exports.push([module.i, "main {\n  padding: 6rem 2rem;\n  margin-bottom: 2rem;\n  border-radius: .3rem; }\n\n.navbar {\n  background-color: #ededfb; }\n\n.Home {\n  color: #faa;\n  border: 0.01em solid #d3d3d3;\n  border-radius: .50em;\n  display: flex;\n  align-items: center;\n  flex-direction: column; }\n\n.Application {\n  border-color: black; }\n\n.Application {\n  border-color: black; }\n", ""]);
 
 // exports
 
@@ -44868,7 +44868,7 @@ var Home = function (_React$Component) {
     value: function render() {
       return React.createElement(
         'div',
-        { className: 'Home' },
+        { className: 'Home container' },
         React.createElement(
           'p',
           null,
@@ -54399,24 +54399,20 @@ exports.push([module.i, "/* DayPicker styles */\n\n.DayPicker {\n  display: inli
 var React = __webpack_require__(4);
 
 var Header = function Header() {
-  return React.createElement(
-    "div",
-    { className: "Header" },
-    React.createElement(
-      "div",
-      null,
-      React.createElement(
-        "p",
-        { className: "Title navbar-brand" },
-        "Are we compatible?"
-      ),
-      React.createElement(
-        "p",
-        null,
-        " This is placeholder for nav menu "
-      )
-    )
-  );
+    return React.createElement(
+        "div",
+        { className: "Header navbar navbar-expand-md navbar-dark fixed-top bg-dark" },
+        React.createElement(
+            "div",
+            { className: "Title navbar-brand" },
+            "Are we compatible?"
+        ),
+        React.createElement(
+            "div",
+            null,
+            " This is placeholder for nav menu "
+        )
+    );
 };
 
 module.exports = Header;

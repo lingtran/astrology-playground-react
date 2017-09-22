@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: PATHS.build + '/index.html',
+      template: PATHS.app + '/index.html',
       title: 'Astrology Playground React',
       inject: 'body'
     })
