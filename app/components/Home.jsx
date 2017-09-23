@@ -5,11 +5,8 @@ class Home extends React.Component {
   render () {
     return (
       <div className="Home container">
-        <div className="Querent">
+        <div className="Querents row">
           <Querent header="ME"/>
-        </div>
-
-        <div className="Querent">
           <Querent header="MY BOO THANG"/>
         </div>
       </div>
@@ -17,4 +14,4 @@ class Home extends React.Component {
   }
 }
 
-module.exports = Home;
+module.exports = Home

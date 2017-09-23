@@ -5,10 +5,11 @@ main {
 }
 
 .navbar {
-  background-color: #ededfb;
+  color: #ededfb;
 }
 
-.Home {
+.Home, .QuerentProfile {
+  margin-bottom: 2rem;
   color: #faa;
   border: 0.01em solid #d3d3d3;
   border-radius: .50em;
@@ -21,6 +22,6 @@ main {
   border-color: black;
 }
 
-.Application {
-  border-color: black;
+h3 {
+  font-size: 1.5rem;
 }

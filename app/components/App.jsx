@@ -1,12 +1,15 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+import { BrowserRouter, Route } from 'react-router-dom'
 const Main = require('./Main')
-const Header = require('./Header')
+const Nav = require('./Nav')
 
 const App = () => (
   <div className="Application container">
-    <Header />
-    <Main />
+    <Nav />
+    <BrowserRouter>
+      <Route exact path='/' component={Main} />
+    </BrowserRouter>
   </div>
 )
 
