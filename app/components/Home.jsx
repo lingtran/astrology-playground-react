@@ -5,7 +5,7 @@ class Home extends React.Component {
   render () {
     return (
       <div className="Home container">
-        <div className="Querents row">
+        <div className="Querents row justify-content-around">
           <Querent header="ME"/>
           <Querent header="MY BOO THANG"/>
         </div>
