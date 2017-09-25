@@ -29195,7 +29195,7 @@ exports = module.exports = __webpack_require__(43)(undefined);
 
 
 // module
-exports.push([module.i, "main {\n  padding: 6rem 2rem;\n  margin-bottom: 2rem;\n  border-radius: .3rem; }\n\n.navbar {\n  color: #ededfb; }\n\n.Home, .QuerentProfile {\n  margin-bottom: 2rem;\n  color: #faa;\n  border: 0.01em solid #d3d3d3;\n  border-radius: .50em;\n  display: flex;\n  align-items: center;\n  flex-direction: column; }\n\n.Application {\n  border-color: black; }\n\nh3 {\n  font-size: 1.5rem; }\n", ""]);
+exports.push([module.i, "main {\n  padding: 6rem 2rem;\n  margin-bottom: 2rem;\n  border-radius: .3rem; }\n\n.navbar {\n  color: #ededfb;\n  background-color: #222;\n  border-color: #080808; }\n\n.Home, .QuerentProfile {\n  margin-bottom: 2rem;\n  color: #faa;\n  border: 0.01em solid #d3d3d3;\n  border-radius: .50em;\n  display: flex;\n  align-items: center;\n  flex-direction: column; }\n\n.Application {\n  border-color: black; }\n\nh3 {\n  font-size: 1rem; }\n\n.DayPickerInput-Overlay {\n  z-index: 99; }\n", ""]);
 
 // exports
 
@@ -44944,6 +44944,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(4);
 
+
+var DAY_FORMAT = "DD/MM/YYYY";
+
 var ZodiacForm = function (_React$Component) {
   _inherits(ZodiacForm, _React$Component);
 
@@ -44984,7 +44987,7 @@ var ZodiacForm = function (_React$Component) {
             React.createElement(_DayPickerInput2.default, {
               name: 'birthday',
               placeholder: 'DOB: DD/MM/YYYY',
-              format: 'DD/MM/YYYY',
+              format: DAY_FORMAT,
               value: value,
               onDayChange: this.handleDayChange
             })

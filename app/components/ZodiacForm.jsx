@@ -4,6 +4,8 @@ import { moment } from 'moment'
 import DayPickerInput from 'react-day-picker/DayPickerInput'
 import "react-day-picker/lib/style.css"
 
+const DAY_FORMAT = "DD/MM/YYYY"
+
 class ZodiacForm extends React.Component {
   constructor () {
     super();
@@ -12,7 +14,7 @@ class ZodiacForm extends React.Component {
     }
   }
 
- handleDayChange (selectedDay) {
+  handleDayChange (selectedDay) {
     this.setState({ selectedDay: selectedDay });
   };
 
@@ -30,7 +32,7 @@ class ZodiacForm extends React.Component {
             <DayPickerInput
               name="birthday"
               placeholder = "DOB: DD/MM/YYYY"
-              format="DD/MM/YYYY"
+              format={DAY_FORMAT}
               value={value}
               onDayChange={this.handleDayChange}
             />

@@ -1,10 +1,11 @@
-require('babel-register')();
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
+require('babel-register')()
+const jsdom = require('jsdom')
+const { JSDOM } = jsdom
 
-const exposedProperties = ['window', 'navigator', 'document'];
+const exposedProperties = ['window', 'navigator', 'document']
 
-const { document } = (new JSDOM('')).window;
+const { document } = (new JSDOM('')).window
+
 global.document = document;
 global.window = document.defaultView;
 Object.keys(document.defaultView).forEach((property) => {
