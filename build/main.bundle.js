@@ -29195,7 +29195,7 @@ exports = module.exports = __webpack_require__(43)(undefined);
 
 
 // module
-exports.push([module.i, "main {\n  padding: 6rem 2rem;\n  margin-bottom: 2rem;\n  border-radius: .3rem; }\n\n.navbar {\n  color: #ededfb;\n  background-color: #222;\n  border-color: #080808; }\n\n.Home, .QuerentProfile {\n  margin-bottom: 2rem;\n  color: #faa;\n  border: 0.01em solid #d3d3d3;\n  border-radius: .50em;\n  display: flex;\n  align-items: center;\n  flex-direction: column; }\n\n.Application {\n  border-color: black; }\n\nh3 {\n  font-size: 1rem; }\n\n.DayPickerInput-Overlay {\n  z-index: 99; }\n", ""]);
+exports.push([module.i, "main {\n  padding: 6rem 2rem;\n  margin-bottom: 2rem;\n  border-radius: .3rem; }\n\n.navbar {\n  color: #ededfb;\n  background-color: #222;\n  border-color: #080808; }\n\n.Home, .Results, .QuerentProfile {\n  margin-bottom: 2rem;\n  color: #faa;\n  border: 0.01em solid #d3d3d3;\n  border-radius: .50em;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  padding: 2rem; }\n\n.Application {\n  border-color: black; }\n\nh3 {\n  font-size: 1rem; }\n\n.DayPickerInput-Overlay {\n  z-index: 99; }\n", ""]);
 
 // exports
 
@@ -29213,7 +29213,7 @@ var React = __webpack_require__(4);
 var ReactDOM = __webpack_require__(53);
 
 var Main = __webpack_require__(365);
-var Nav = __webpack_require__(399);
+var Nav = __webpack_require__(400);
 
 var App = function App() {
   return React.createElement(
@@ -44825,14 +44825,14 @@ module.exports = ReactDOMInvalidARIAHook;
 
 var React = __webpack_require__(4);
 var Home = __webpack_require__(366);
-var QuerentProfile = __webpack_require__(398);
+var Results = __webpack_require__(398);
 
 var Main = function Main() {
   return React.createElement(
     'main',
     null,
     React.createElement(Home, null),
-    React.createElement(QuerentProfile, null)
+    React.createElement(Results, null)
   );
 };
 
@@ -44873,7 +44873,7 @@ var Home = function (_React$Component) {
         { className: 'Home container' },
         React.createElement(
           'div',
-          { className: 'Querents row' },
+          { className: 'Querents row justify-content-around' },
           React.createElement(Querent, { header: 'ME' }),
           React.createElement(Querent, { header: 'MY BOO THANG' })
         )
@@ -44943,6 +44943,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var React = __webpack_require__(4);
+var PropTypes = __webpack_require__(6);
 
 
 var DAY_FORMAT = "DD/MM/YYYY";
@@ -44958,6 +44959,9 @@ var ZodiacForm = function (_React$Component) {
     _this.state = {
       selectedDay: undefined
     };
+
+    _this.handleDayChange = _this.handleDayChange.bind(_this);
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
     return _this;
   }
 
@@ -44965,6 +44969,13 @@ var ZodiacForm = function (_React$Component) {
     key: 'handleDayChange',
     value: function handleDayChange(selectedDay) {
       this.setState({ selectedDay: selectedDay });
+    }
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit(event) {
+      event.preventDefault();
+
+      this.props.onSubmit(this.state.selectedDay);
     }
   }, {
     key: 'render',
@@ -44980,7 +44991,7 @@ var ZodiacForm = function (_React$Component) {
         { className: 'DayPicker' },
         React.createElement(
           _reactstrap.Form,
-          null,
+          { onSubmit: this.handleSubmit },
           React.createElement(
             _reactstrap.FormGroup,
             null,
@@ -44992,7 +45003,6 @@ var ZodiacForm = function (_React$Component) {
               onDayChange: this.handleDayChange
             })
           ),
-          ' ',
           React.createElement(
             _reactstrap.Button,
             null,
@@ -45005,6 +45015,11 @@ var ZodiacForm = function (_React$Component) {
 
   return ZodiacForm;
 }(React.Component);
+
+ZodiacForm.propTypes = {
+  selectedDay: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired
+};
 
 module.exports = ZodiacForm;
 
@@ -54422,19 +54437,49 @@ exports.push([module.i, "/* DayPicker styles */\n\n.DayPicker {\n  display: inli
 
 
 var React = __webpack_require__(4);
+var QuerentProfile = __webpack_require__(399);
+
+var Results = function Results() {
+  return React.createElement(
+    'div',
+    { className: 'Results container' },
+    '...will figure out how to handle rendering and route',
+    React.createElement(
+      'div',
+      { className: 'row justify-content-around' },
+      React.createElement(QuerentProfile, null),
+      React.createElement(QuerentProfile, null)
+    )
+  );
+};
+
+module.exports = Results;
+
+/***/ }),
+/* 399 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var React = __webpack_require__(4);
 
 var QuerentProfile = function QuerentProfile() {
   return React.createElement(
     "div",
-    { className: "QuerentProfile container" },
-    "Placeholder for profiles...will figure out how to handle rendering and route"
+    { className: "col" },
+    React.createElement(
+      "div",
+      { className: "QuerentProfile" },
+      "Placeholder"
+    )
   );
 };
 
 module.exports = QuerentProfile;
 
 /***/ }),
-/* 399 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

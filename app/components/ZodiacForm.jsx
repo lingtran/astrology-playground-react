@@ -1,4 +1,5 @@
 const React = require('react')
+const PropTypes = require('prop-types')
 import { Button, Form, FormGroup, Label } from 'reactstrap'
 import { moment } from 'moment'
 import DayPickerInput from 'react-day-picker/DayPickerInput'
@@ -12,11 +13,22 @@ class ZodiacForm extends React.Component {
     this.state = {
       selectedDay: undefined
     }
+
+    this.handleDayChange = this.handleDayChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleDayChange (selectedDay) {
     this.setState({ selectedDay: selectedDay });
   };
+
+  handleSubmit (event) {
+    event.preventDefault();
+
+    this.props.onSubmit(
+      this.state.selectedDay
+    )
+  }
 
   render () {
     const datePickerProps = {
@@ -27,7 +39,7 @@ class ZodiacForm extends React.Component {
 
     return (
       <div className="DayPicker">
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <DayPickerInput
               name="birthday"
@@ -37,12 +49,20 @@ class ZodiacForm extends React.Component {
               onDayChange={this.handleDayChange}
             />
           </FormGroup>
-          {' '}
-          <Button>Submit</Button>
+          <Button
+            className='button'
+            type='submit'>
+            Submit
+          </Button>
         </Form>
       </div>
     )
   }
+}
+
+ZodiacForm.propTypes = {
+  selectedDay: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired
 }
 
 module.exports = ZodiacForm

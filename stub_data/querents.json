@@ -1,0 +1,15 @@
+{
+  "querents": [
+    {"designation": "me",
+      "sunSign": {
+        "name": "Taurus",
+        "image": "https://www.horoscope.com/images-US/signs/profile-taurus.png"
+      }
+    },
+    {"designation": "boo",
+    "sunSign": {
+      "name": "Taurus",
+      "image": "https://www.horoscope.com/images-US/signs/profile-taurus.png"
+      }}
+  ]
+}

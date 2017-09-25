@@ -1,11 +1,11 @@
 const React = require('react')
 const Home = require('./Home')
-const QuerentProfile = require('./QuerentProfile')
+const Results = require('./Results')
 
 const Main = () => (
   <main>
     <Home />
-    <QuerentProfile />
+    <Results />
   </main>
 )
 
