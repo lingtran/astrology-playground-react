@@ -1,5 +1,6 @@
 @import './colors/standard-colors';
 @import './standard-fonts';
+@import './nav';
 
 main {
   padding: 6rem 2rem;
@@ -11,17 +12,6 @@ body {
   background-color: $nebula-green;
   font-family: $standard-font;
   color: $text-beige;
-}
-
-.navbar {
-  color: $night-sky-navy-dark;
-  background-color: $mauve-pink;
-  border-color: $brand-black;
-}
-
-.navbar-brand {
-  color: $brand-black;
-  font-family: 'Berkshire Swash', cursive;
 }
 
 .Home, .Results, .QuerentProfile {
@@ -40,21 +30,11 @@ h3 {
   font-size: 1rem;
 }
 
-.DayPickerInput-Overlay {
-  z-index: 99;
-}
-
-.DayPicker {
-  color: $nebula-purple;
-}
-
 .container {
   border-bottom: solid;
   border-width: thin;
   border-bottom-color: $nebula-light-blue;
 }
 
-.button {
-  background-color: $rose-pink;
-  color: $text-beige;
-}
+@import './button';
+@import './daypicker';
