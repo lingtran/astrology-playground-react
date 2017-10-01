@@ -1,6 +1,7 @@
 @import './colors/standard-colors';
 @import './standard-fonts';
 @import './nav';
+@import './footer';
 
 main {
   padding: 6rem 2rem;
@@ -9,9 +10,9 @@ main {
 }
 
 body {
-  background-color: $nebula-green;
+  background-color: $astro-skyblue;
   font-family: $standard-font;
-  color: $text-beige;
+  color: $astro-purple-dark;
 }
 
 .Home, .Results, .QuerentProfile {
@@ -30,7 +31,7 @@ h3 {
   font-size: 1rem;
 }
 
-.container {
+.border-bottom {
   border-bottom: solid;
   border-width: thin;
   border-bottom-color: $nebula-light-blue;

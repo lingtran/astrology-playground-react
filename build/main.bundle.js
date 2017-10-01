@@ -29195,7 +29195,7 @@ exports = module.exports = __webpack_require__(43)(undefined);
 
 
 // module
-exports.push([module.i, ".navbar {\n  color: #131862;\n  background-color: #D29495;\n  border-color: #080808; }\n\n.navbar-brand {\n  color: #080808;\n  font-family: 'Berkshire Swash', cursive; }\n\nmain {\n  padding: 6rem 2rem;\n  margin-bottom: 2rem;\n  border-radius: .3rem; }\n\nbody {\n  background-color: #499986;\n  font-family: \"Hind Siliguri\", sans-serif;\n  color: #F5F5DC; }\n\n.Home, .Results, .QuerentProfile {\n  margin-bottom: 2rem;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  padding: 2rem; }\n\n.Application {\n  border-color: #080808; }\n\nh3 {\n  font-size: 1rem; }\n\n.container {\n  border-bottom: solid;\n  border-width: thin;\n  border-bottom-color: #b3d1d2; }\n\n.button {\n  background-color: #AA5761;\n  color: #F5F5DC; }\n\n.DayPickerInput-Overlay {\n  z-index: 99; }\n\n.DayPicker {\n  color: #251539; }\n", ""]);
+exports.push([module.i, ".navbar {\n  color: #499986;\n  background-color: #222643;\n  border-color: #080808; }\n\n.navbar-brand {\n  color: #DFBF7D;\n  font-family: 'Berkshire Swash', cursive; }\n\n.footer {\n  color: #DFBF7D;\n  background-color: #222643; }\n\nmain {\n  padding: 6rem 2rem;\n  margin-bottom: 2rem;\n  border-radius: .3rem; }\n\nbody {\n  background-color: #81A4C0;\n  font-family: \"Hind Siliguri\", sans-serif;\n  color: #222643; }\n\n.Home, .Results, .QuerentProfile {\n  margin-bottom: 2rem;\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  padding: 2rem; }\n\n.Application {\n  border-color: #080808; }\n\nh3 {\n  font-size: 1rem; }\n\n.border-bottom {\n  border-bottom: solid;\n  border-width: thin;\n  border-bottom-color: #b3d1d2; }\n\n.button {\n  background-color: #422437;\n  color: #DFBF7D; }\n\n.DayPickerInput-Overlay {\n  z-index: 99; }\n\n.DayPicker {\n  color: #222643; }\n", ""]);
 
 // exports
 
@@ -29214,17 +29214,23 @@ var ReactDOM = __webpack_require__(53);
 
 var Main = __webpack_require__(365);
 var Nav = __webpack_require__(400);
+var Footer = __webpack_require__(401);
 
 var App = function App() {
   return React.createElement(
     'div',
-    { className: 'Application container' },
+    null,
     React.createElement(Nav, null),
     React.createElement(
-      _reactRouterDom.BrowserRouter,
-      null,
-      React.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: Main })
-    )
+      'div',
+      { className: 'Application container' },
+      React.createElement(
+        _reactRouterDom.BrowserRouter,
+        null,
+        React.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: Main })
+      )
+    ),
+    React.createElement(Footer, null)
   );
 };
 
@@ -44870,7 +44876,7 @@ var Home = function (_React$Component) {
     value: function render() {
       return React.createElement(
         'div',
-        { className: 'Home container' },
+        { className: 'Home container border-bottom' },
         React.createElement(
           'div',
           { className: 'Querents row justify-content-around' },
@@ -54444,7 +54450,7 @@ var QuerentProfile = __webpack_require__(399);
 var Results = function Results() {
   return React.createElement(
     'div',
-    { className: 'Results container' },
+    { className: 'Results container border-bottom' },
     '...will figure out how to handle rendering and route',
     React.createElement(
       'div',
@@ -54507,6 +54513,29 @@ var Nav = function Nav() {
 };
 
 module.exports = Nav;
+
+/***/ }),
+/* 401 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var React = __webpack_require__(4);
+
+var Footer = function Footer() {
+    return React.createElement(
+        "footer",
+        { className: "footer bd-footer text-muted" },
+        React.createElement(
+            "div",
+            { className: "container" },
+            "Placeholder footer"
+        )
+    );
+};
+
+module.exports = Footer;
 
 /***/ })
 /******/ ]);

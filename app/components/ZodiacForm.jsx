@@ -1,18 +1,18 @@
-const React = require('react')
-const PropTypes = require('prop-types')
+const React = require('react');
+const PropTypes = require('prop-types');
 import { Button, Form, FormGroup, Label } from 'reactstrap'
 import { moment } from 'moment'
 import DayPickerInput from 'react-day-picker/DayPickerInput'
 import "react-day-picker/lib/style.css"
 
-const DAY_FORMAT = "DD/MM/YYYY"
+const DAY_FORMAT = "DD/MM/YYYY";
 
 class ZodiacForm extends React.Component {
   constructor () {
     super();
     this.state = {
       selectedDay: undefined
-    }
+    };
 
     this.handleDayChange = this.handleDayChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -63,6 +63,6 @@ class ZodiacForm extends React.Component {
 ZodiacForm.propTypes = {
   selectedDay: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired
-}
+};
 
-module.exports = ZodiacForm
+module.exports = ZodiacForm;
